@@ -3,3 +3,4 @@ gruntfile.coffee
 package.json
 /static/
 .sass-cache/
+app/media/
