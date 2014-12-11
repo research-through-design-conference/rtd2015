@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% load markdown_deux_tags %}
+
+{% block extra_css %}
+<style>
+section.header{
+  background-image: url("{{STATIC_URL}}img/home-bg.jpg");
+}
+div.title-container div.important-dates{
+  border-image: url("{{STATIC_URL}}img/border3.png");
+}
+</style>
+{% endblock %}
+
+{% block body_id %}rtd2015{% endblock %}
+{% block body_class %}home{% endblock %}
+
+{% block header %}
+<section class="header">
+  <div class="title-container">
+    <div class="home-title">
+      <img src="{{STATIC_URL}}img/title.png">
+      <h3>25<sup>th</sup> to 27<sup>th</sup> March 2015, Cambridge UK</h3>
+    </div>
+    <div class="important-dates">
+      <h3>Important Dates</h3>
+      <p><span>Deadline for Abstracts:</span> 4th July 2014</p>
+      <p><span>Authors Notified:</span> 3rd September 2014</p>
+      <p><span>Paper Submission Deadline:</span> 24th October 2014</p>
+      <p><span>Authors Notified:</span> 12th December 2014</p>
+      <p><span>Final Paper Submission:</span> 9th January 2015</p>
+      <p><span>Artefact Arrival Date:</span> 27th February 2015</p>
+      <p><span>RTD 2015 Conference:</span> 25–27th March 2015</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="content-container">
+  <img class="home-content-header" src="{{STATIC_URL}}img/home/home-header1.jpg">
+  <div class="content">
+    {{ home.text|markdown:"STYLE" }}
+  </div>
+  <div class="sidebar">
+    <h3>RTD on Twitter</h3>
+    <div class="twitter">
+      <a class="twitter-timeline" href="https://twitter.com/search?q=%23rtd2015" data-widget-id="474794103033450496">Tweets about "#rtd2015"</a>
+      <script>
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      </script>
+    </div>
+    <h3>Our Sponsors</h3>
+    <img src="{{STATIC_URL}}img/MSRC.png">
+    <img src="{{STATIC_URL}}img/Necastle-Uni.png">
+    <img src="{{STATIC_URL}}img/Leverhulme-Trust.png">
+    <img src="{{STATIC_URL}}img/EPSRC-logo.png">
+    <img src="{{STATIC_URL}}img/DC-logo-sponsor.png">
+  </div>
+</section>
+{% endblock %}
