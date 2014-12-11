@@ -1,0 +1,5 @@
+node_modules/
+gruntfile.coffee
+package.json
+/static/
+.sass-cache/

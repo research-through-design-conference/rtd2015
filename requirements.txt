@@ -1,0 +1,12 @@
+Django==1.7.1
+boto==2.27.0
+dj-database-url==0.2.2
+dj-static==0.0.6
+django-markdown-deux==1.0.4
+django-storages==1.1.8
+gunicorn==19.1.1
+markdown2==2.2.1
+psycopg2==2.5.1
+pytz==2014.2
+static==0.4
+wsgiref==0.1.2
