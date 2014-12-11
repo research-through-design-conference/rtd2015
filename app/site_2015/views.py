@@ -6,9 +6,10 @@ from site_2015.models import Home
 
 
 def home(request):
+        pages = Page.objects.filter(top_level_nav=True).order_by('-pub_date')
         home = get_object_or_404(Home)
         # now return the rendered template
-        return render(request, 'site_2015/home.html', {'home': home})
+        return render(request, 'site_2015/home.html', {'page': pages, 'home': home})
 
 def page(request, slug):
         # get the Page object

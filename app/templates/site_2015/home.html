@@ -5,7 +5,7 @@
 {% block extra_css %}
 <style>
 section.header{
-  background-image: url("{{STATIC_URL}}img/home-bg.jpg");
+  background-image: url("{{ MEDIA_URL }}{{ home.header_image }}");
 }
 div.title-container div.important-dates{
   border-image: url("{{STATIC_URL}}img/border3.png");
@@ -41,6 +41,7 @@ div.title-container div.important-dates{
 <section class="content-container">
   <img class="home-content-header" src="{{STATIC_URL}}img/home/home-header1.jpg">
   <div class="content">
+    <h1>{{ home.title }}</h1>
     {{ home.text|markdown:"STYLE" }}
   </div>
   <div class="sidebar">

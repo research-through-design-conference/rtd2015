@@ -3,23 +3,23 @@
 {% load markdown_deux_tags %}
 
 {% block extra_css %}
-<!--<style>
+<style>
 section.header{
   background-position: center bottom;
-  background-image: url("{{STATIC_URL}}img/IMG_1913.jpg");
-  background-image: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url("{{STATIC_URL}}img/IMG_1913.jpg");
-  background-image: -webkit-gradient(linear, 0 top, 0 bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.2))), url("{{STATIC_URL}}img/IMG_1913.jpg");
+  background-image: url("{{ MEDIA_URL }}{{ content.header_image }}");
+  background-image: -moz-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url("{{ MEDIA_URL }}{{ content.header_image }}");
+  background-image: -webkit-gradient(linear, 0 top, 0 bottom, from(rgba(0,0,0,0.6)), to(rgba(0,0,0,0.2))), url("{{ MEDIA_URL }}{{ content.header_image }}");
 }
-</style>-->
+</style>
 {% endblock %}
 
 {% block body_id %}rtd2015{% endblock %}
-{% block body_class %}standard{% endblock %}
+{% block body_class %}standard_page{% endblock %}
 
 {% block header %}
 <section class="header">
   <div class="title-container">
-    <h1>{{ page.title }}</h1>
+    <h1>{{ content.title }}</h1>
   </div>
 </section>
 {% endblock %}
