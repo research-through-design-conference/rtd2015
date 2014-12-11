@@ -70,6 +70,9 @@ body#rtd2015{
     @media screen and (max-width: 540px){
       height: 90px;
     }
+    @media screen and (max-width: 980px){
+      margin-bottom: 29px;
+    }
     div.container{
       @media screen and (max-width: 980px){
         text-align: center;
@@ -180,6 +183,7 @@ body#rtd2015{
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         text-align: right;
+        max-width: 540px;
         @media screen and (max-width: 980px){
           display: block;
           left: 0;
@@ -191,6 +195,7 @@ body#rtd2015{
           transform: translateY(0);
           padding: 0;
           text-align: center;
+          margin: 0 auto;
         }
         li{
           display: inline;
@@ -384,6 +389,8 @@ body#rtd2015.home{
       @media screen and (max-width: 980px){
         height: 240px;
         width: auto;
+        display: block;
+        margin: 0 auto;
       }
     }
     div.content{
@@ -414,7 +421,7 @@ body#rtd2015.home{
   }
 }
 
-body#rtd2015.about, body#rtd2015.attending, body#rtd2015.organisers{
+body#rtd2015.standard_page{
   section.header{
     height: 540px;
     background-size: cover;
